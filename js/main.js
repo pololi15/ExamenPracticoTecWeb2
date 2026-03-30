@@ -269,6 +269,8 @@ function setupEvents() {
 		}
 	});
 
+	refs.modalCta.addEventListener("click", closeModal);
+
 	document.addEventListener("keydown", (event) => {
 		if (event.key === "Escape" && !refs.modal.hidden) {
 			closeModal();

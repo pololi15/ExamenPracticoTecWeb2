@@ -1,0 +1,14 @@
+{
+  "name": "examen-practico-tec-web-2",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Catálogo interactivo de servicios digitales",
+  "scripts": {
+    "build:css": "sass src/scss/main.scss dist/css/main.css --style=expanded --source-map",
+    "watch:css": "sass --watch src/scss/main.scss:dist/css/main.css --style=expanded --source-map",
+    "build": "npm run build:css"
+  },
+  "devDependencies": {
+    "sass": "^1.93.2"
+  }
+}

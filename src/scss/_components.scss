@@ -1,0 +1,25 @@
+@use "variables" as *;
+
+.btn {
+  @include button-base;
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.65rem 1rem;
+}
+
+.btn-primary {
+  color: $surface;
+  background: linear-gradient(120deg, $primary, #02a395);
+  box-shadow: 0 10px 20px rgba(0, 127, 115, 0.26);
+
+  &:hover {
+    background: linear-gradient(120deg, $primary-strong, $primary);
+    box-shadow: 0 14px 26px rgba(0, 127, 115, 0.35);
+  }
+}
+
+.btn-ghost {
+  color: $text;
+  background: $surface;
+  border: 1px solid rgba(29, 42, 50, 0.18);
+}

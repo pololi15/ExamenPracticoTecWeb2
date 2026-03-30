@@ -1,0 +1,48 @@
+@use "variables" as *;
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 16, 22, 0.58);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.modal[hidden] {
+  display: none;
+}
+
+.modal-content {
+  width: min(620px, 96vw);
+  background: $surface;
+  border-radius: $radius-lg;
+  padding: 1rem;
+  border: 1px solid rgba(29, 42, 50, 0.15);
+  box-shadow: $shadow;
+  animation: fadeIn 0.25s ease;
+}
+
+.modal-close {
+  @include button-base;
+  background: transparent;
+  color: $text-soft;
+  margin-left: auto;
+  display: block;
+}
+
+.modal-meta {
+  padding-left: 1.05rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

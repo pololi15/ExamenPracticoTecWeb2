@@ -1,0 +1,52 @@
+@use "variables" as *;
+
+:root {
+  --container: min(1120px, 92vw);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  color: $text;
+  background:
+    radial-gradient(circle at 85% 12%, rgba(255, 138, 61, 0.15), transparent 35%),
+    radial-gradient(circle at 10% 30%, rgba(0, 127, 115, 0.16), transparent 42%),
+    $bg;
+  line-height: 1.55;
+
+  &.modal-open {
+    overflow: hidden;
+  }
+}
+
+h1,
+h2,
+h3,
+.brand-text {
+  font-family: "Sora", sans-serif;
+  line-height: 1.2;
+}
+
+.container {
+  width: var(--container);
+  margin: 0 auto;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+
+  &:focus {
+    left: 1rem;
+    top: 1rem;
+    background: $surface;
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    z-index: 999;
+  }
+}

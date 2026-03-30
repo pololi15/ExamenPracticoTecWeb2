@@ -1,0 +1,167 @@
+@use "variables" as *;
+
+.section-head {
+  margin-bottom: 1.1rem;
+
+  h2 {
+    margin-bottom: 0.3rem;
+  }
+
+  p {
+    color: $text-soft;
+    margin: 0;
+  }
+}
+
+.services,
+.interaction,
+.contact {
+  padding: 2rem 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.service-card {
+  background: $surface;
+  border: 1px solid rgba(29, 42, 50, 0.1);
+  border-radius: $radius-md;
+  padding: 1rem;
+  box-shadow: 0 8px 22px rgba(20, 43, 56, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 32px rgba(20, 43, 56, 0.12);
+  }
+
+  &.is-selected {
+    border-color: $primary;
+    box-shadow: 0 0 0 2px rgba(0, 127, 115, 0.25);
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    color: $text-soft;
+  }
+}
+
+.service-meta {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.4rem;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.94rem;
+  }
+
+  span {
+    color: $text-soft;
+  }
+}
+
+.panel {
+  background: $surface;
+  border-radius: $radius-md;
+  border: 1px solid rgba(29, 42, 50, 0.1);
+  box-shadow: 0 8px 24px rgba(20, 43, 56, 0.08);
+  padding: 1rem;
+}
+
+.interaction-grid,
+.contact-grid,
+.footer-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.interaction-grid {
+  grid-template-columns: 1.1fr 1fr;
+}
+
+.filters {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+label {
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  font: inherit;
+  border-radius: 10px;
+  border: 1px solid rgba(29, 42, 50, 0.2);
+  background: $surface-soft;
+  padding: 0.7rem 0.8rem;
+
+  &:focus-visible {
+    outline: 3px solid rgba(0, 127, 115, 0.25);
+    border-color: $primary;
+  }
+
+  &.is-invalid {
+    border-color: $danger;
+    background: #fff1ef;
+  }
+
+  &.is-valid {
+    border-color: $success;
+    background: #f0fff7;
+  }
+}
+
+.feedback {
+  min-height: 1rem;
+  color: $danger;
+  font-weight: 600;
+}
+
+.results-info {
+  margin: 0;
+  font-weight: 800;
+  color: $primary;
+}
+
+.empty-state {
+  text-align: center;
+  font-weight: 700;
+  color: $text-soft;
+}
+
+.form-status {
+  min-height: 1.2rem;
+  font-weight: 700;
+  margin: 0.5rem 0 0;
+
+  &.success {
+    color: $success;
+  }
+
+  &.error {
+    color: $danger;
+  }
+}

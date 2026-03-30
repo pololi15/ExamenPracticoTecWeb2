@@ -1,0 +1,71 @@
+@use "variables" as *;
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(244, 247, 249, 0.94);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(29, 42, 50, 0.08);
+}
+
+.nav-wrap {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  display: inline-grid;
+  place-items: center;
+  color: $surface;
+  background: linear-gradient(130deg, $primary, #02a395);
+  font-weight: 800;
+}
+
+.brand-text {
+  font-size: 1.08rem;
+  letter-spacing: 0.2px;
+}
+
+.menu-toggle {
+  @include button-base;
+  padding: 0.5rem 1rem;
+  background: $surface;
+  box-shadow: 0 4px 14px rgba(20, 52, 66, 0.15);
+  display: none;
+}
+
+.main-nav {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1.1rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: $text;
+    font-weight: 700;
+
+    &:hover,
+    &:focus-visible {
+      color: $primary;
+    }
+  }
+}

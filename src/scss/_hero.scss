@@ -1,0 +1,64 @@
+@use "variables" as *;
+
+.hero {
+  padding: 3.8rem 0 2.2rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.eyebrow {
+  color: $primary;
+  margin: 0 0 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 4vw, 2.9rem);
+  margin: 0;
+}
+
+.hero-copy {
+  margin-top: 1rem;
+  color: $text-soft;
+}
+
+.hero-actions {
+  margin-top: 1.45rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.hero-card {
+  background: linear-gradient(155deg, #09323e, #195b69);
+  color: $surface;
+  border-radius: $radius-lg;
+  box-shadow: $shadow;
+  padding: 1.2rem 1.1rem;
+
+  h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 1.1rem;
+  }
+
+  strong {
+    color: #ffd8bf;
+  }
+}
+
+.hero-illustration {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 0.75rem;
+}
